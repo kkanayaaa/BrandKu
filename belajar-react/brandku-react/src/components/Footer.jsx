@@ -4,6 +4,6 @@ const Footer = () => {
       © 2025 BrandKu. All Rights Reserved.
     </footer>
   );
-}
+} 
 
 export default Footer;

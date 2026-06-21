@@ -9,7 +9,7 @@ const Card = ({ title, description }) => {
         {description}
       </p>
     </div>
-  );
+  ); 
 }
 
 export default Card;

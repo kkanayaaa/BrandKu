@@ -18,4 +18,4 @@ export const featureData = [
     },
 ];
 
-export default featureData;
+export default featureData; 
