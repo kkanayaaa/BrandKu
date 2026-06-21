@@ -1,4 +1,4 @@
-function Header() {
+const Header = () => {
   return (
     <header className="bg-white shadow-sm">
       <div className="max-w-6xl mx-auto flex justify-between p-4">

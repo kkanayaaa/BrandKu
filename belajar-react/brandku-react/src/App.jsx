@@ -1,16 +1,24 @@
+import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Feature';
 import Footer from './components/Footer';
 
-function App() {
+const App = () => {
+
+  const [count, setCount] = useState(0);
+  const onTapped = () => {
+    console.log("clicked")
+    setCount(count + 1);
+  };
+
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col justify-between">
       
-      {/* Container atas untuk Header, Hero, dan Features */}
+      
       <div>
         <Header />
-        <Hero />
+        <Hero count={count} onTapped={onTapped}/>
         <Features />
       </div>
 

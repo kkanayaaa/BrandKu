@@ -1,33 +1,31 @@
-// 1. Import komponen Card yang baru kita buat
+import React from 'react';
 import Card from './Card';
+import featureData from '../data/feature'; 
 
-function Features() {
+const Feature = () => {
   return (
-    <section className="py-16">
-      <h2 className="text-3xl font-bold text-center mb-10">
-        Mengapa BrandKu?
-      </h2>
-      <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 px-6">
-        
-        {/* 2. Panggil komponen Card dan isi datanya lewat props */}
-        <Card 
-          title="Mudah Digunakan" 
-          description="Tidak perlu keahlian teknis. Setup dalam 5 menit." 
-        />
-        
-        <Card 
-          title="Serba Otomatis" 
-          description="Otomatiskan tugas berulang dan fokus pada hal penting." 
-        />
-        
-        <Card 
-          title="Laporan Real-time" 
-          description="Pantau performa bisnis kapan saja dan di mana saja." 
-        />
+    <section className="py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Mengapa BrandKu?</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Kami menyediakan semua fitur yang Anda butuhkan untuk mengembangkan bisnis ke level selanjutnya.
+          </p>
+        </div>
 
+       
+        <div className="grid md:grid-cols-3 gap-8">
+          {featureData.map((item) => (
+            <Card 
+              key={item.id} 
+              title={item.title} 
+              description={item.description} 
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
 
-export default Features;
+export default Feature;

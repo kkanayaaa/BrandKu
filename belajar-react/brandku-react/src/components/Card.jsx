@@ -1,5 +1,5 @@
-// Komponen Card menerima "props" (title dan description) dari komponen induknya
-function Card({ title, description }) {
+
+const Card = ({ title, description }) => {
   return (
     <div className="bg-white p-6 rounded-xl shadow hover:bg-gray-200 transition-all">
       <h3 className="font-bold text-lg mb-2">
