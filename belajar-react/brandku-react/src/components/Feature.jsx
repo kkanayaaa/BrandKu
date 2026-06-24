@@ -17,8 +17,10 @@ const Feature = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {featureData.map((item) => (
             <Card 
-              key={item.id} 
+              key={item.id}
+              id={item.id} 
               title={item.title} 
+            
               description={item.description} 
             />
           ))}
