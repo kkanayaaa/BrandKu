@@ -1,12 +1,23 @@
-import { useState } from 'react';
-import Navbar from './components/Navbar';
-import DashboardPemilik from './pages/pemilik/DashboardPemilik';
+import React, { useState } from 'react';
+import DashboardPemilik from './pages/Pemilik/DashboardPemilik';
 import TambahKos from './pages/Pemilik/TambahKos';
 
-const App = () =>{
-  return(
-    <TambahKos />
-  );
-} 
+function App() {
+  const [currentPage, setCurrentPage] = useState('DashboardPemilik');
 
-export default App
+  return (
+    <>
+      
+      {currentPage === 'DashboardPemilik' && (
+        <DashboardPemilik setPage={setCurrentPage} />
+      )}
+      
+      
+      {currentPage === 'TambahKos' && (
+        <TambahKos setPage={setCurrentPage} />
+      )}
+    </>
+  );
+}
+
+export default App;
